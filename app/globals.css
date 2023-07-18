@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  scroll-behavior: smooth;
+}
+
+.container{
+  max-width: 1112px;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+.splide__arrow--next {
+  right: -100px !important;
+}
+
+.splide__arrow--prev {
+  left: -100px  !important;
+}
+
+.button-footer {
+  @apply inline-block text-gray-700 mb-4 px-[20px] hover:underline decoration-2 decoration-gray-700 underline-offset-2
+}
+
+.form-bg{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image:url("../public/images/form/form.png") ;
+  background-attachment: fixed;
+}
+
+input{
+  border: 1px black solid;
+  padding: 5px 0 5px 15px ;
+  border-radius: 10px;
+  width: 100%;
+}
+
+textarea{
+  border: 1px black solid;
+  padding: 5px 0 5px 15px ;
+  border-radius: 10px;
+  width: 100%;
+}
+
