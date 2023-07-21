@@ -6,6 +6,9 @@ import '@splidejs/react-splide/css';
 import Form from "../components/Form"
 import ItemList from "../components/ItemList"
 
+
+//https://plastic-app.vercel.app/ [хост]
+
 const SliderInfo = [
   {
     title: "Огнестойкий полипропилен",
@@ -39,24 +42,42 @@ export default function Home() {
   return (
     <main >
       <Header />
-      <div className='container pt-[50px] ' id="home" >
-        <Splide aria-label="My Favorite Images">
+      <div className='container lg:pt-[50px] sm:pt-[100px] pt-[150px]' id="home" >
+        <Splide
+         aria-label="My Favorite Images"
+          options={
+            {
+              breakpoints: {
+                1024:{
+                  pagination:false
+                },
+                640:{
+                  arrows:false
+                }
+              }
+            }
+          }
+        >
         {SliderInfo.map((elem, index) => (
            <SplideSlide key={index}>
-              <div  className='flex h-[500px] items-center justify-between'>
-                <div className='max-w-[504px] pl-[50px]' >
-                  <h1 className='mt-[10px] mb-[20px] text-gray-700 font-bolt text-2xl'> {elem.title} </h1>
-                  <p className='py-[15px]'>
+              <div  className='flex gap-5 lg:flex-row flex-col h-[500px] lg:pb-0 pb-8 items-center justify-between'>
+                <div className='max-w-[504px] lg:pl-[50px] ' >
+                  <h1 className='lg:mt-[10px] lg:mb-[20px] text-gray-700 font-bolt text-2xl'> {elem.title} </h1>
+                  <p className='lg:block hidden py-[15px]'>
                     {elem.description}
+                    
                   </p>
 
-                  <button className='px-3 py-2 mt-5 border-2 rounded-full border-purple-400 text-purple-400 hover:text-white hover:bg-purple-400'>{elem.button}</button>
+                  <button className='lg:block hidden px-3 py-2 mt-5 border-2 rounded-full border-purple-400 text-purple-400 hover:text-white hover:bg-purple-400'>{elem.button}</button>
                 </div>
 
-                <div className='min-w-[334px] max-w-[334px] h-[394px] object-cover mt-[80px] mr-[150px]'>
+                <div className='min-w-[334px] max-w-[334px] h-[394px] object-cover lg:mt-[80px] mt-5  lg:mr-[150px]'>
 
-                  <Image src={elem.image} width={334} height={394} alt="non" />
+                  <Image  src={elem.image} width={334} height={394} alt="non" />
+                  
                 </div>
+                  <button className='lg:hidden block px-3 py-2 mt-5 border-2 rounded-full border-purple-400 text-purple-400 hover:text-white hover:bg-purple-400'>{elem.button}</button>
+
               </div>
               </SplideSlide>
             ))}
@@ -67,7 +88,7 @@ export default function Home() {
 
       <Form></Form>
       <ItemList></ItemList>    
-      <footer className='border-t mt-10 px-2 py-10'>
+            <footer className='border-t mt-10 px-2 py-10'>
         <div>
           <div>
             <h6 className='text-gray-700 mb-4'></h6>

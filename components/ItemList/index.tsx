@@ -9,6 +9,8 @@ interface Item {
   
 }
 
+
+
 const items = [{
     id: "PP",
     name: "Полипропиленовые листы",
@@ -57,7 +59,7 @@ const ItemList: React.FC = () => {
   
 
     return (
-        <div className='pt-20 px-[100px] grid gap-20 grid-cols-2 ' id="items" >
+        <div className='pt-20 lg:px-[100px] px-5 grid gap-20 lg:grid-cols-2  grid-cols-1' id="items" >
             {items.map((item: any, index: number) => (
                 <Item key={index} id={item.id} name={item.name} thickness={item.thickness} dimensions={item.dimensions} img={item.img} color={item.color} dicription={item.dicription}  /> 
             )    
