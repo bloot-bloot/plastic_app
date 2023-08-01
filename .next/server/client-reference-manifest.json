@@ -56,17 +56,9 @@
         "async": false
       }
     },
-    "(app-client)/./public/icons/burger.svg": {
+    "(app-client)/./public/icons/bricks.png": {
       "*": {
-        "id": "(sc_client)/./public/icons/burger.svg",
-        "name": "*",
-        "chunks": [],
-        "async": false
-      }
-    },
-    "(app-client)/./public/icons/logo.svg": {
-      "*": {
-        "id": "(sc_client)/./public/icons/logo.svg",
+        "id": "(sc_client)/./public/icons/bricks.png",
         "name": "*",
         "chunks": [],
         "async": false
@@ -259,16 +251,8 @@
       ],
       "async": false
     },
-    "/Users/ilyablutshtein/Desktop/plastic/plastic_app/public/icons/burger.svg": {
-      "id": "(app-client)/./public/icons/burger.svg",
-      "name": "*",
-      "chunks": [
-        "app/page:static/chunks/app/page.js"
-      ],
-      "async": false
-    },
-    "/Users/ilyablutshtein/Desktop/plastic/plastic_app/public/icons/logo.svg": {
-      "id": "(app-client)/./public/icons/logo.svg",
+    "/Users/ilyablutshtein/Desktop/plastic/plastic_app/public/icons/bricks.png": {
+      "id": "(app-client)/./public/icons/bricks.png",
       "name": "*",
       "chunks": [
         "app/page:static/chunks/app/page.js"
